@@ -10,27 +10,27 @@ public class Plus extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
-        this.getLogger().info("v" + this.getDescription().getVersion() + " disabled.");
+        this.getLogger().info("TnTBlockerPlusPlusPlus v" + this.getDescription().getVersion() + " disabled.");
     }
 
     @Override
     public void onEnable() {
         this.getServer().getPluginManager().registerEvents(this, this);
-        this.getLogger().info("v" + this.getDescription().getVersion() + " enabled.");
+        this.getLogger().info("TnTBlockerPlusPlusPlus v" + this.getDescription().getVersion() + " enabled.");
     }
 
     @EventHandler
     public void prelogin(PlayerPreLoginEvent event) {
-        if (event.getName().equalsIgnoreCase("tntbass")) {
-            event.disallow(PlayerPreLoginEvent.Result.KICK_BANNED, "TNT is not allowed on this server");
+        if (event.getName().equalsIgnoreCase("TnTBass")) {
+            event.disallow(PlayerPreLoginEvent.Result.KICK_BANNED, "TnT is not allowed on this server.");
         }
     }
 
     // Even protects offline mode servers!
     @EventHandler
     public void login(PlayerLoginEvent event) {
-        if (event.getPlayer().getName().equalsIgnoreCase("tntbass")) {
-            event.disallow(PlayerLoginEvent.Result.KICK_BANNED, "TNT is not allowed on this server");
+        if (event.getPlayer().getName().equalsIgnoreCase("TnTBass")) {
+            event.disallow(PlayerLoginEvent.Result.KICK_BANNED, "TnT is not allowed on this server.");
         }
     }
 
