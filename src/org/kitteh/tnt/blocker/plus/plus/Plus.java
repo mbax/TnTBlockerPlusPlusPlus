@@ -1,11 +1,12 @@
 package org.kitteh.tnt.blocker.plus.plus;
 
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerPreLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Plus extends JavaPlugin {
+public class Plus extends JavaPlugin implements Listener {
 
     @Override
     public void onDisable() {
@@ -14,6 +15,7 @@ public class Plus extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        this.getServer().getPluginManager().registerEvents(this, this);
         this.getLogger().info("v" + this.getDescription().getVersion() + " enabled.");
     }
 
