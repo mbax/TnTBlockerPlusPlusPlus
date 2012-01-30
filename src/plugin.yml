@@ -1,0 +1,6 @@
+name: TnTBlockerPlusPlusPlus
+main: org.kitteh.tnt.blocker.plus.plus.Plus
+version: 1.0
+website: http://kitteh.org
+author: mbaxter
+description: Block TnT from your server
