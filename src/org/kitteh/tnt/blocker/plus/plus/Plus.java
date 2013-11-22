@@ -20,7 +20,7 @@ public class Plus extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void prelogin(PlayerPreLoginEvent event) {
+    public void prelogin(AsyncPlayerPreLoginEvent event) {
         if (event.getName().equalsIgnoreCase("tntbass")) {
             event.disallow(PlayerPreLoginEvent.Result.KICK_BANNED, "TNT is not allowed on this server");
         }
